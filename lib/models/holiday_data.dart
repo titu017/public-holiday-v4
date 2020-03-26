@@ -4,28 +4,13 @@
 
 import 'dart:convert';
 
-HolidayData holidayDataFromJson(String str) =>
-    HolidayData.fromJson(json.decode(str));
+List<HolidayData> holidayDataFromJson(String str) => List<HolidayData>.from(
+    json.decode(str).map((x) => HolidayData.fromJson(x)));
 
-String holidayDataToJson(HolidayData data) => json.encode(data.toJson());
+String holidayDataToJson(List<HolidayData> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class HolidayData {
-  List<Datum> data;
-
-  HolidayData({
-    this.data,
-  });
-
-  factory HolidayData.fromJson(Map<String, dynamic> json) => HolidayData(
-        data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
-      );
-
-  Map<String, dynamic> toJson() => {
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
-      };
-}
-
-class Datum {
   String category;
   String dateEnglish;
   String monthEnglish;
@@ -36,7 +21,7 @@ class Datum {
   String eventName;
   String details;
 
-  Datum({
+  HolidayData({
     this.category,
     this.dateEnglish,
     this.monthEnglish,
@@ -48,7 +33,7 @@ class Datum {
     this.details,
   });
 
-  factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+  factory HolidayData.fromJson(Map<String, dynamic> json) => HolidayData(
         category: json["category"],
         dateEnglish: json["dateEnglish"],
         monthEnglish: json["monthEnglish"],

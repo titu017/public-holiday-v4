@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:publicholidayv4/screens/general_holidays.dart';
+import 'package:publicholidayv4/screens/holiday_category.dart';
 
 class Wrapper extends StatefulWidget {
   @override
@@ -7,6 +7,8 @@ class Wrapper extends StatefulWidget {
 }
 
 class _WrapperState extends State<Wrapper> {
+  String appBarTitle = "সকল ছুটি";
+
   @override
   Widget build(BuildContext context) {
     List<String> categoryNames = [
@@ -24,7 +26,7 @@ class _WrapperState extends State<Wrapper> {
     print(x);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
+        title: Text(appBarTitle == null ? categoryNames[0] : appBarTitle),
         centerTitle: true,
       ),
       drawer: Drawer(
@@ -33,12 +35,12 @@ class _WrapperState extends State<Wrapper> {
             Container(
               width: double.infinity,
               height: MediaQuery.of(context).padding.top,
-              color: Colors.green,
+              color: Colors.amber,
             ),
             Container(
               height: 200,
               width: double.infinity,
-              color: Colors.blueGrey,
+              color: Colors.amber,
             ),
             ListView.builder(
               shrinkWrap: true,
@@ -52,6 +54,9 @@ class _WrapperState extends State<Wrapper> {
                   ),
                   onTap: () {
                     Navigator.pop(context);
+                    setState(() {
+                      appBarTitle = categoryNames[index];
+                    });
                   },
                 );
               },
@@ -59,7 +64,7 @@ class _WrapperState extends State<Wrapper> {
           ],
         ),
       ),
-      body: GeneralHolidays(),
+      body: HolidayCategory(appBarTitle),
     );
   }
 }

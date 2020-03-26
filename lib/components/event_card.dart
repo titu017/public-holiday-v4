@@ -6,12 +6,14 @@ class EventCard extends StatelessWidget {
   final String monthEnglish;
   final String weekDay;
   final String eventDetails;
+  final GestureTapCallback onPressed;
   EventCard(
       {@required this.weekDay,
       @required this.eventName,
       @required this.dateEnglish,
       @required this.eventDetails,
       @required this.monthEnglish,
+      @required this.onPressed,
       Key key})
       : super(key: key);
   @override
@@ -20,44 +22,50 @@ class EventCard extends StatelessWidget {
     final leftWidth = deviceWidth * 66 / 100;
     final rightWidth = deviceWidth * 26 / 100;
     final horizontalPaddingMargin = deviceWidth * 2 / 100;
-    return Container(
-      color: Colors.green,
-      width: double.infinity,
-      margin: EdgeInsets.all(horizontalPaddingMargin),
+    return Padding(
       padding: EdgeInsets.all(horizontalPaddingMargin),
-      child: Column(
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-            child: Row(
-              children: <Widget>[
-                Container(
-                  width: leftWidth,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(eventName),
-                      Text(weekDay),
-                    ],
-                  ),
+      child: RawMaterialButton(
+        fillColor: Colors.amber,
+        splashColor: Colors.amberAccent,
+        onPressed: onPressed,
+        child: Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(horizontalPaddingMargin),
+          child: Column(
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      width: leftWidth,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(eventName),
+                          Text(weekDay),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: rightWidth,
+                      child: Column(
+                        children: <Widget>[
+                          Text(dateEnglish),
+                          Text(monthEnglish),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                Container(
-                  width: rightWidth,
-                  child: Column(
-                    children: <Widget>[
-                      Text(dateEnglish),
-                      Text(monthEnglish),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+              ),
+              Container(
+                width: double.infinity,
+                child: Text(eventDetails),
+              ),
+            ],
           ),
-          Container(
-            width: double.infinity,
-            child: Text(eventDetails),
-          ),
-        ],
+        ),
       ),
     );
   }
