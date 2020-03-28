@@ -49,20 +49,39 @@ class Calendar extends StatefulWidget {
 
 class _CalendarState extends State<Calendar> {
   int temp;
+  String monthName;
+  int noOfGrids;
+  int weekDayOfFirstDay;
 
   @override
   Widget build(BuildContext context) {
+    String testFunction(int date) {
+      String gridContent;
+      if (date < 1) {
+        gridContent = " ";
+      } else {
+        gridContent = date.toString();
+      }
+      return gridContent;
+    }
+
     return Column(
       children: <Widget>[
+        // Month Title Bar
         Container(
-          color: Colors.green[800],
+          margin: EdgeInsets.only(left: 8, right: 8, bottom: 16),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            color: Colors.green[800],
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               IconButton(
+                iconSize: 40,
                 icon: Icon(
                   Icons.arrow_left,
-                  size: 40,
                   color: Colors.white,
                 ),
                 onPressed: () {
@@ -71,29 +90,37 @@ class _CalendarState extends State<Calendar> {
                   if (cf.isBetween(temp)) {
                     setState(() {
                       temp = temp;
+                      weekDayOfFirstDay =
+                          cf.firstDayOfSelectedMonth(temp).weekday;
                     });
                   } else {
                     setState(() {
                       temp = 12;
+                      weekDayOfFirstDay =
+                          cf.firstDayOfSelectedMonth(temp).weekday;
                     });
                   }
                 },
               ),
               Container(
+                width: MediaQuery.of(context).size.width / 2.5,
+                alignment: Alignment.center,
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: Text(
-                  "March",
+                  temp == null
+                      ? cf.toMonthString(widget.monthNo)
+                      : cf.toMonthString(temp),
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 26,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
               ),
               IconButton(
+                iconSize: 40,
                 icon: Icon(
                   Icons.arrow_right,
-                  size: 40,
                   color: Colors.white,
                 ),
                 onPressed: () {
@@ -102,10 +129,14 @@ class _CalendarState extends State<Calendar> {
                   if (cf.isBetween(temp)) {
                     setState(() {
                       temp = temp;
+                      weekDayOfFirstDay =
+                          cf.firstDayOfSelectedMonth(temp).weekday;
                     });
                   } else {
                     setState(() {
                       temp = 1;
+                      weekDayOfFirstDay =
+                          cf.firstDayOfSelectedMonth(temp).weekday;
                     });
                   }
                 },
@@ -113,27 +144,98 @@ class _CalendarState extends State<Calendar> {
             ],
           ),
         ),
-        GridView.count(
-          shrinkWrap: true,
-          crossAxisCount: 7,
-          children: List.generate(
-            temp == null
-                ? cf.noOfDaysInTheMonth(widget.monthNo)
-                : cf.noOfDaysInTheMonth(temp),
-            (index) {
-              return Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.green[800],
-                ),
-                margin: EdgeInsets.all(3),
-                alignment: Alignment.center,
-                child: Text(
-                  "${index + 1}",
-                  style: TextStyle(color: Colors.white, fontSize: 22),
-                ),
-              );
-            },
+        // Week Days Row
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 1.5),
+          child: MediaQuery.removePadding(
+            context: context,
+            removeBottom: true,
+            removeTop: true,
+            child: GridView.count(
+              shrinkWrap: true,
+              crossAxisCount: 7,
+              crossAxisSpacing: 3,
+              children: List.generate(7, (index) {
+                return Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(7),
+                    color: Colors.green[900],
+                  ),
+                  child: Text(
+                    cf.toWeekDayString(index + 1).substring(0, 2),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                );
+              }),
+            ),
+          ),
+        ),
+        // Days of the Month
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 1.5),
+          child: MediaQuery.removePadding(
+            context: context,
+            removeBottom: true,
+            removeTop: true,
+            child: GridView.count(
+              shrinkWrap: true,
+              mainAxisSpacing: 3,
+              crossAxisSpacing: 3,
+              crossAxisCount: 7,
+              children: List.generate(
+                weekDayOfFirstDay == null
+                    ? cf.noOfDaysInTheMonth(widget.monthNo) +
+                        cf.firstDayOfSelectedMonth(widget.monthNo).weekday -
+                        1
+                    : cf.noOfDaysInTheMonth(temp) + weekDayOfFirstDay - 1,
+                (index) {
+                  int date;
+                  if (weekDayOfFirstDay == null) {
+                    date = index +
+                        2 -
+                        cf.firstDayOfSelectedMonth(widget.monthNo).weekday;
+                  } else {
+                    date = index + 2 - weekDayOfFirstDay;
+                  }
+                  if (date < 1) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      alignment: Alignment.center,
+                      child: Text(
+                        weekDayOfFirstDay == null
+                            ? testFunction(date)
+                            : testFunction(date),
+                        style: TextStyle(color: Colors.white, fontSize: 22),
+                      ),
+                    );
+                  } else {
+                    return RawMaterialButton(
+                      fillColor: Colors.green[800],
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          weekDayOfFirstDay == null
+                              ? testFunction(date)
+                              : testFunction(date),
+                          style: TextStyle(color: Colors.white, fontSize: 22),
+                        ),
+                      ),
+                      onPressed: () {},
+                    );
+                  }
+                },
+              ),
+            ),
           ),
         ),
       ],

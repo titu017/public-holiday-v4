@@ -1,6 +1,15 @@
 CustomFunction cf = CustomFunction();
 
 class CustomFunction {
+  // First Day of the Selected Month
+  DateTime firstDayOfSelectedMonth(int monthNO) {
+    if (monthNO.toString().length == 1) {
+      return DateTime.parse("2020-0$monthNO-01");
+    } else {
+      return DateTime.parse("2020-$monthNO-01");
+    }
+  }
+
   // Month range checker
   bool isBetween(int month) {
     if (month >= 1 && month <= 12) {
@@ -80,32 +89,31 @@ class CustomFunction {
   }
 
   // To Make an output as a Month Name
-  String toMonthString(DateTime dateTime) {
-    int months = dateTime.month;
+  String toMonthString(int monthNo) {
     String month;
-    if (months == 01) {
+    if (monthNo == 01) {
       month = "January";
-    } else if (months == 02) {
+    } else if (monthNo == 02) {
       month = "February";
-    } else if (months == 03) {
+    } else if (monthNo == 03) {
       month = "March";
-    } else if (months == 04) {
+    } else if (monthNo == 04) {
       month = "April";
-    } else if (months == 05) {
+    } else if (monthNo == 05) {
       month = "May";
-    } else if (months == 06) {
+    } else if (monthNo == 06) {
       month = "June";
-    } else if (months == 07) {
+    } else if (monthNo == 07) {
       month = "July";
-    } else if (months == 08) {
+    } else if (monthNo == 08) {
       month = "August";
-    } else if (months == 09) {
+    } else if (monthNo == 09) {
       month = "September";
-    } else if (months == 10) {
+    } else if (monthNo == 10) {
       month = "October";
-    } else if (months == 11) {
+    } else if (monthNo == 11) {
       month = "November";
-    } else if (months == 12) {
+    } else if (monthNo == 12) {
       month = "December";
     } else {
       month = "Month Error";
@@ -114,8 +122,7 @@ class CustomFunction {
   }
 
   // To Format WEEKDAY like "Sunday" use this method
-  String toWeekDayString(DateTime dateTime) {
-    int weekDay = dateTime.weekday;
+  String toWeekDayString(int weekDay) {
     String day;
     if (weekDay == 1) {
       day = "Monday";
