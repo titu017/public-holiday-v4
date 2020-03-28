@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:publicholidayv4/screens/holiday_category.dart';
 
-class Wrapper extends StatefulWidget {
+class CardView extends StatefulWidget {
+  static String id = "card_view";
   @override
-  _WrapperState createState() => _WrapperState();
+  _CardViewState createState() => _CardViewState();
 }
 
-class _WrapperState extends State<Wrapper> {
+class _CardViewState extends State<CardView> {
   String appBarTitle = "সকল ছুটি";
 
   @override

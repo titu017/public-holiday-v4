@@ -5,13 +5,11 @@ class EventCard extends StatelessWidget {
   final String dateEnglish;
   final String monthEnglish;
   final String weekDay;
-  final String eventDetails;
   final GestureTapCallback onPressed;
   EventCard(
       {@required this.weekDay,
       @required this.eventName,
       @required this.dateEnglish,
-      @required this.eventDetails,
       @required this.monthEnglish,
       @required this.onPressed,
       Key key})
@@ -58,10 +56,6 @@ class EventCard extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-              Container(
-                width: double.infinity,
-                child: Text(eventDetails),
               ),
             ],
           ),

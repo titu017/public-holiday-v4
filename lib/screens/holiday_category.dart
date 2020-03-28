@@ -3,6 +3,7 @@ import 'package:publicholidayv4/components/error_message.dart';
 import 'package:publicholidayv4/components/event_card.dart';
 import 'package:publicholidayv4/components/unknown_message.dart';
 import 'package:publicholidayv4/models/holiday_data.dart';
+import 'package:publicholidayv4/screens/details_screen.dart';
 
 class HolidayCategory extends StatefulWidget {
   final String category;
@@ -46,6 +47,7 @@ class _HolidayCategoryState extends State<HolidayCategory> {
                 textColor: Colors.red,
                 onPressed: () {
                   Navigator.pop(context);
+                  Navigator.pushNamed(context, DetailsScreen.id);
                 },
               ),
             ],
@@ -70,7 +72,6 @@ class _HolidayCategoryState extends State<HolidayCategory> {
                   dateEnglish: cardData.dateEnglish,
                   monthEnglish: cardData.monthEnglish,
                   weekDay: cardData.weekDay,
-                  eventDetails: cardData.details,
                   onPressed: () {
                     _showDetails(cardData);
                   },
@@ -81,7 +82,6 @@ class _HolidayCategoryState extends State<HolidayCategory> {
                   dateEnglish: cardData.dateEnglish,
                   monthEnglish: cardData.monthEnglish,
                   weekDay: cardData.weekDay,
-                  eventDetails: cardData.details,
                   onPressed: () {
                     _showDetails(cardData);
                   },
