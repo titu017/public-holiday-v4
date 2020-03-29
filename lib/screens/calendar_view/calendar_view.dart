@@ -419,9 +419,7 @@ class _CalendarState extends State<Calendar> {
                         } else {
                           date = index + 2 - weekDayOfFirstDay;
                         }
-                        //TODO: remove date
-                        int _day, _month;
-                        _day = date;
+                        int _month;
                         if (temp == null) {
                           _month = widget.monthNo;
                         } else {
@@ -443,43 +441,34 @@ class _CalendarState extends State<Calendar> {
                           );
                         } else {
                           DateTime _dateTime =
-                              cf.dateTimeGenerate(_day, _month, 2020);
+                              cf.dateTimeGenerate(date, _month, 2020);
                           return RawMaterialButton(
                             fillColor: eventDateCollection.contains(_dateTime)
                                 ? Colors.amber
-                                : Colors.green,
+                                : Colors.green[800],
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               alignment: Alignment.center,
                               child: Text(
-                                weekDayOfFirstDay == null
-                                    ? getGridContent(date)
-                                    : getGridContent(date),
+                                getGridContent(date),
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 22),
+                                  color: eventDateCollection.contains(_dateTime)
+                                      ? Colors.black
+                                      : Colors.white,
+                                  fontSize: 22,
+                                ),
                               ),
                             ),
                             onPressed: () {
-                              var _day = date;
-                              var _month;
-                              if (temp == null) {
-                                _month = widget.monthNo;
-                              } else {
-                                _month = temp;
-                              }
-                              DateTime _dateTime =
-                                  cf.dateTimeGenerate(_day, _month, 2020);
-                              for (var holiday in _holidayData) {
-                                if (holiday.dateTime == _dateTime) {
-                                  showDialog(
-                                    context: context,
-                                    child: AlertDialog(
-                                      title: Text("ok"),
-                                    ),
-                                  );
-                                }
+                              if (eventDateCollection.contains(_dateTime)) {
+                                showDialog(
+                                  context: context,
+                                  child: AlertDialog(
+                                    title: Text("ok"),
+                                  ),
+                                );
                               }
                             },
                           );
