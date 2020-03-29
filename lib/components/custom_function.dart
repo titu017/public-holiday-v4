@@ -1,6 +1,25 @@
+import 'package:flutter/cupertino.dart';
+import 'package:publicholidayv4/models/holiday_data.dart';
+
 CustomFunction cf = CustomFunction();
 
 class CustomFunction {
+  Future<List<HolidayData>> fetchAllData(BuildContext context) async {
+    List<HolidayData> listOfHoliday;
+    await DefaultAssetBundle.of(context)
+        .loadString("assets/data/holiday_data.json")
+        .then((value) {
+      List<HolidayData> x = holidayDataFromJson(value);
+      listOfHoliday.addAll(x);
+    });
+    return listOfHoliday;
+  }
+
+  // Holiday Count in a Month
+  holidayCounterInMonth(int month, List<HolidayData> holidayData) {
+    print(holidayData.length);
+  }
+
   // DateTime Generator from String
   DateTime dateTimeGenerate(int day, int month, int year) {
     String dayS, monthS;
