@@ -1,6 +1,22 @@
 CustomFunction cf = CustomFunction();
 
 class CustomFunction {
+  // DateTime Generator from String
+  DateTime dateTimeGenerate(int day, int month, int year) {
+    String dayS, monthS;
+    if (day.toString().length == 1) {
+      dayS = "0$day";
+    } else {
+      dayS = "$day";
+    }
+    if (month.toString().length == 1) {
+      monthS = "0$month";
+    } else {
+      monthS = "$month";
+    }
+    return DateTime.parse("$year-$monthS-$dayS");
+  }
+
   // First Day of the Selected Month
   DateTime firstDayOfSelectedMonth(int monthNO) {
     if (monthNO.toString().length == 1) {
