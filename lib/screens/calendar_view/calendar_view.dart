@@ -3,79 +3,6 @@ import 'package:publicholidayv4/components/custom_function.dart';
 import 'package:publicholidayv4/models/holiday_data.dart';
 import 'package:pie_chart/pie_chart.dart';
 
-//class CalendarView extends StatefulWidget {
-//  static String id = "/calendar_view";
-//  @override
-//  _CalendarViewState createState() => _CalendarViewState();
-//}
-//
-//class _CalendarViewState extends State<CalendarView> {
-//  DateTime pickedDate = DateTime.now();
-//  List<HolidayData> listOfHoliday = List<HolidayData>();
-//  @override
-//  void initState() {
-//    cf.fetchAllData().then((value) {
-//      listOfHoliday = value;
-//    });
-//    super.initState();
-//  }
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    cf.holidayCounterInMonth(3, listOfHoliday);
-//    Map<String, double> dataMap = new Map();
-//    dataMap.putIfAbsent(
-//        cf.toMonthString(3), () => cf.holidayCounterInMonth(3, listOfHoliday));
-//    dataMap.putIfAbsent(
-//        "All Holidays", () => double.parse("${listOfHoliday.length}"));
-////    dataMap.putIfAbsent("Xamarin", () => 2);
-////    dataMap.putIfAbsent("Ionic", () => 2);
-////    dataMap.putIfAbsent("Mars", () => 5);
-//
-//    List<Color> colorList = [
-//      Colors.amber,
-//      Colors.green,
-//      Colors.redAccent,
-//      Colors.blueAccent,
-//      Colors.greenAccent
-//    ];
-//
-////    // DatePicker
-////    _customDatePicker() async {
-////      DateTime date = await showDatePicker(
-////        context: context,
-////        initialDate: pickedDate,
-////        firstDate: DateTime(DateTime.now().year - 10),
-////        lastDate: DateTime(DateTime.now().year + 10),
-////      );
-////      setState(() {
-////        pickedDate = date;
-////      });
-////    }
-//
-//    return Scaffold(
-//      body: SingleChildScrollView(
-//        child: Column(
-//          children: <Widget>[
-//            Container(
-//              height: MediaQuery.of(context).padding.top,
-//            ),
-//            SizedBox(height: 20),
-//            Calendar(DateTime.now().month),
-//            SizedBox(height: 20),
-//
-//            // pie chart starts from here
-//            PieChart(
-//              dataMap: dataMap,
-//              colorList: colorList,
-//            ),
-//          ],
-//        ),
-//      ),
-//    );
-//  }
-//}
-
 class CalendarView extends StatefulWidget {
   static String id = "/calendar_view";
   @override
@@ -98,6 +25,9 @@ class _CalendarViewState extends State<CalendarView> {
     cf.fetchAllData().then((value) {
       listOfHoliday = value;
     });
+    temp = DateTime.now().month;
+    weekDayOfFirstDay = cf.firstDayOfSelectedMonth(pickedMonthNo).weekday;
+    noOfGrids = cf.noOfDaysInTheMonth(temp) + weekDayOfFirstDay - 1;
     super.initState();
   }
 
@@ -113,10 +43,6 @@ class _CalendarViewState extends State<CalendarView> {
       return gridContent;
     }
 
-//    dataMap.putIfAbsent("Xamarin", () => 2);
-//    dataMap.putIfAbsent("Ionic", () => 2);
-//    dataMap.putIfAbsent("Mars", () => 5);
-
     List<Color> colorList = [
       Colors.amber,
       Colors.green,
@@ -124,19 +50,6 @@ class _CalendarViewState extends State<CalendarView> {
       Colors.blueAccent,
       Colors.greenAccent
     ];
-
-//    // DatePicker
-//    _customDatePicker() async {
-//      DateTime date = await showDatePicker(
-//        context: context,
-//        initialDate: pickedDate,
-//        firstDate: DateTime(DateTime.now().year - 10),
-//        lastDate: DateTime(DateTime.now().year + 10),
-//      );
-//      setState(() {
-//        pickedDate = date;
-//      });
-//    }
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -180,20 +93,18 @@ class _CalendarViewState extends State<CalendarView> {
                                 if (temp == null) temp = pickedMonthNo;
                                 temp--;
                                 if (cf.isBetween(temp)) {
-                                  setState(() {
-                                    temp = temp;
-                                    weekDayOfFirstDay = cf
-                                        .firstDayOfSelectedMonth(temp)
-                                        .weekday;
-                                  });
+                                  temp = temp;
                                 } else {
-                                  setState(() {
-                                    temp = 12;
-                                    weekDayOfFirstDay = cf
-                                        .firstDayOfSelectedMonth(temp)
-                                        .weekday;
-                                  });
+                                  temp = 12;
                                 }
+                                setState(() {
+                                  temp = temp;
+                                  weekDayOfFirstDay =
+                                      cf.firstDayOfSelectedMonth(temp).weekday;
+                                  noOfGrids = cf.noOfDaysInTheMonth(temp) +
+                                      weekDayOfFirstDay -
+                                      1;
+                                });
                               },
                             ),
                             Container(
@@ -222,20 +133,18 @@ class _CalendarViewState extends State<CalendarView> {
                                 if (temp == null) temp = pickedMonthNo;
                                 temp++;
                                 if (cf.isBetween(temp)) {
-                                  setState(() {
-                                    temp = temp;
-                                    weekDayOfFirstDay = cf
-                                        .firstDayOfSelectedMonth(temp)
-                                        .weekday;
-                                  });
+                                  temp = temp;
                                 } else {
-                                  setState(() {
-                                    temp = 1;
-                                    weekDayOfFirstDay = cf
-                                        .firstDayOfSelectedMonth(temp)
-                                        .weekday;
-                                  });
+                                  temp = 1;
                                 }
+                                setState(() {
+                                  temp = temp;
+                                  weekDayOfFirstDay =
+                                      cf.firstDayOfSelectedMonth(temp).weekday;
+                                  noOfGrids = cf.noOfDaysInTheMonth(temp) +
+                                      weekDayOfFirstDay -
+                                      1;
+                                });
                               },
                             ),
                           ],
@@ -287,34 +196,10 @@ class _CalendarViewState extends State<CalendarView> {
                             crossAxisSpacing: 3,
                             crossAxisCount: 7,
                             children: List.generate(
-                              weekDayOfFirstDay == null
-                                  ? cf.noOfDaysInTheMonth(pickedMonthNo) +
-                                      cf
-                                          .firstDayOfSelectedMonth(
-                                              pickedMonthNo)
-                                          .weekday -
-                                      1
-                                  : cf.noOfDaysInTheMonth(temp) +
-                                      weekDayOfFirstDay -
-                                      1,
+                              noOfGrids,
                               (index) {
-                                int date;
-                                if (weekDayOfFirstDay == null) {
-                                  date = index +
-                                      2 -
-                                      cf
-                                          .firstDayOfSelectedMonth(
-                                              pickedMonthNo)
-                                          .weekday;
-                                } else {
-                                  date = index + 2 - weekDayOfFirstDay;
-                                }
-                                int _month;
-                                if (temp == null) {
-                                  _month = pickedMonthNo;
-                                } else {
-                                  _month = temp;
-                                }
+                                int date = index + 2 - weekDayOfFirstDay;
+                                int _month = temp;
                                 if (date < 1) {
                                   return Container(
                                     decoration: BoxDecoration(
@@ -322,9 +207,7 @@ class _CalendarViewState extends State<CalendarView> {
                                     ),
                                     alignment: Alignment.center,
                                     child: Text(
-                                      weekDayOfFirstDay == null
-                                          ? getGridContent(date)
-                                          : getGridContent(date),
+                                      getGridContent(date),
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 22),
                                     ),
@@ -378,11 +261,12 @@ class _CalendarViewState extends State<CalendarView> {
 
             // pie chart starts from here
             PieChart(
-              dataMap: cf.pieChartDataMap(
-                  temp ?? pickedMonthNo,
-                  cf.holidayCounterInMonth(
-                      temp ?? pickedMonthNo, listOfHoliday),
-                  double.parse("${listOfHoliday.length}")),
+              //TODO:  have to check this one when app starts for the first time
+              dataMap: cf.dataMapForSingleMonthVSyear(
+                temp,
+                cf.holidayCounterInMonth(temp, listOfHoliday),
+                double.parse("${listOfHoliday.length}"),
+              ),
               colorList: colorList,
             ),
           ],

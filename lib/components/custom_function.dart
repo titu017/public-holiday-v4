@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:publicholidayv4/models/holiday_data.dart';
 
@@ -6,7 +5,7 @@ CustomFunction cf = CustomFunction();
 
 class CustomFunction {
   // Pie Chart Data Map
-  Map pieChartDataMap(int monthNo, double length1, double length2) {
+  Map dataMapForSingleMonthVSyear(int monthNo, double length1, double length2) {
     Map<String, double> dataMap = new Map();
     dataMap.putIfAbsent(cf.toMonthString(monthNo), () => length1);
     dataMap.putIfAbsent("All Holidays", () => length2);
