@@ -19,6 +19,8 @@ class _CalendarViewState extends State<CalendarView> {
   int weekDayOfFirstDay;
   Color eventColor = Colors.green[800];
   bool hasEvent = false;
+  List<int> _dayList;
+  Map dataMap;
 
   @override
   void initState() {
@@ -28,28 +30,21 @@ class _CalendarViewState extends State<CalendarView> {
     temp = DateTime.now().month;
     weekDayOfFirstDay = cf.firstDayOfSelectedMonth(pickedMonthNo).weekday;
     noOfGrids = cf.noOfDaysInTheMonth(temp) + weekDayOfFirstDay - 1;
+    _dayList = cf.calculateGridElements(noOfGrids, weekDayOfFirstDay);
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    String getGridContent(int date) {
-      String gridContent;
-      if (date < 1) {
-        gridContent = " ";
-      } else {
-        gridContent = date.toString();
-      }
-      return gridContent;
-    }
-
     List<Color> colorList = [
       Colors.amber,
       Colors.green,
-      Colors.redAccent,
-      Colors.blueAccent,
-      Colors.greenAccent
     ];
+    dataMap = cf.dataMapForSingleMonthVSyear(
+      temp,
+      cf.holidayCounterInMonth(temp, listOfHoliday),
+      double.parse("${listOfHoliday.length}"),
+    );
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -104,6 +99,8 @@ class _CalendarViewState extends State<CalendarView> {
                                   noOfGrids = cf.noOfDaysInTheMonth(temp) +
                                       weekDayOfFirstDay -
                                       1;
+                                  _dayList = cf.calculateGridElements(
+                                      noOfGrids, weekDayOfFirstDay);
                                 });
                               },
                             ),
@@ -144,6 +141,8 @@ class _CalendarViewState extends State<CalendarView> {
                                   noOfGrids = cf.noOfDaysInTheMonth(temp) +
                                       weekDayOfFirstDay -
                                       1;
+                                  _dayList = cf.calculateGridElements(
+                                      noOfGrids, weekDayOfFirstDay);
                                 });
                               },
                             ),
@@ -196,25 +195,23 @@ class _CalendarViewState extends State<CalendarView> {
                             crossAxisSpacing: 3,
                             crossAxisCount: 7,
                             children: List.generate(
-                              noOfGrids,
+                              _dayList.length,
                               (index) {
-                                int date = index + 2 - weekDayOfFirstDay;
-                                int _month = temp;
-                                if (date < 1) {
+                                if (_dayList[index] < 0) {
                                   return Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
                                     ),
                                     alignment: Alignment.center,
                                     child: Text(
-                                      getGridContent(date),
+                                      " ",
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 22),
                                     ),
                                   );
                                 } else {
-                                  DateTime _dateTime =
-                                      cf.dateTimeGenerate(date, _month, 2020);
+                                  DateTime _dateTime = cf.dateTimeGenerate(
+                                      _dayList[index], temp, 2020);
                                   return RawMaterialButton(
                                     fillColor:
                                         eventDateCollection.contains(_dateTime)
@@ -226,7 +223,7 @@ class _CalendarViewState extends State<CalendarView> {
                                       ),
                                       alignment: Alignment.center,
                                       child: Text(
-                                        getGridContent(date),
+                                        "${_dayList[index]}",
                                         style: TextStyle(
                                           color: eventDateCollection
                                                   .contains(_dateTime)
@@ -262,11 +259,7 @@ class _CalendarViewState extends State<CalendarView> {
             // pie chart starts from here
             PieChart(
               //TODO:  have to check this one when app starts for the first time
-              dataMap: cf.dataMapForSingleMonthVSyear(
-                temp,
-                cf.holidayCounterInMonth(temp, listOfHoliday),
-                double.parse("${listOfHoliday.length}"),
-              ),
+              dataMap: dataMap,
               colorList: colorList,
             ),
           ],

@@ -4,6 +4,40 @@ import 'package:publicholidayv4/models/holiday_data.dart';
 CustomFunction cf = CustomFunction();
 
 class CustomFunction {
+  List<int> calculateGridElements(int noOfGrids, int weekDayOfFirstDay) {
+    List<int> _dayList = List<int>();
+    try {
+      int lastDayOfGrid;
+      noOfGrids > 35
+          ? lastDayOfGrid = 7 - weekDayOfFirstDay + 1 + 28
+          : lastDayOfGrid = noOfGrids - weekDayOfFirstDay + 1;
+      if (noOfGrids > 35) {
+        int rem = noOfGrids % 35;
+        for (int i = 1; i <= 35; i++) {
+          if (rem >= i) {
+            _dayList.add(i + lastDayOfGrid);
+          } else if (i > rem && i < weekDayOfFirstDay) {
+            _dayList.add(-1);
+          } else {
+            _dayList.add(i - weekDayOfFirstDay + 1);
+          }
+        }
+      } else {
+        for (int i = 1; i <= noOfGrids; i++) {
+          if (i < weekDayOfFirstDay) {
+            _dayList.add(-1);
+          } else {
+            _dayList.add(i - weekDayOfFirstDay + 1);
+          }
+        }
+      }
+      return _dayList;
+    } catch (e) {
+      print("error caught while creating list of grid elements");
+      return _dayList;
+    }
+  }
+
   // Pie Chart Data Map
   Map dataMapForSingleMonthVSyear(int monthNo, double length1, double length2) {
     Map<String, double> dataMap = new Map();
