@@ -1,23 +1,46 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart';
 import 'package:publicholidayv4/models/holiday_data.dart';
 
 CustomFunction cf = CustomFunction();
 
 class CustomFunction {
-  Future<List<HolidayData>> fetchAllData(BuildContext context) async {
+  // Pie Chart Data Map
+  Map pieChartDataMap(int monthNo, double length1, double length2) {
+    Map<String, double> dataMap = new Map();
+    dataMap.putIfAbsent(cf.toMonthString(monthNo), () => length1);
+    dataMap.putIfAbsent("All Holidays", () => length2);
+    return dataMap;
+  }
+
+  // Event Date Collection
+  List<DateTime> eventDateCollection(List<HolidayData> holidayDataList) {
+    List<DateTime> collection = List<DateTime>();
+    for (var holiday in holidayDataList) {
+      collection.add(holiday.dateTime);
+    }
+    return collection;
+  }
+
+  Future<List<HolidayData>> fetchAllData() async {
     List<HolidayData> listOfHoliday;
-    await DefaultAssetBundle.of(context)
-        .loadString("assets/data/holiday_data.json")
-        .then((value) {
-      List<HolidayData> x = holidayDataFromJson(value);
-      listOfHoliday.addAll(x);
+    await rootBundle.loadString("assets/data/holiday_data.json").then((value) {
+      listOfHoliday = holidayDataFromJson(value);
     });
+//    print(listOfHoliday[0].dateTime);
     return listOfHoliday;
   }
 
   // Holiday Count in a Month
-  holidayCounterInMonth(int month, List<HolidayData> holidayData) {
-    print(holidayData.length);
+  double holidayCounterInMonth(int month, List<HolidayData> holidayData) {
+    int counter = 0;
+    List<DateTime> allCollection = eventDateCollection(holidayData);
+    for (var collection in allCollection) {
+      if (collection.month == month) {
+        counter++;
+      }
+    }
+    return double.parse("$counter");
   }
 
   // DateTime Generator from String
