@@ -1,9 +1,9 @@
 import 'package:flutter/services.dart';
-import 'package:publicholidayv4/models/holiday_data.dart';
+import 'package:publicholidayv4/models/main_data_model.dart';
 
-CustomFunction cf = CustomFunction();
+CustomFunction2 cf2 = CustomFunction2();
 
-class CustomFunction {
+class CustomFunction2 {
   List<int> calculateGridElements(int noOfGrids, int weekDayOfFirstDay) {
     List<int> _dayList = List<int>();
     try {
@@ -41,32 +41,48 @@ class CustomFunction {
   // Pie Chart Data Map
   Map dataMapForSingleMonthVSyear(int monthNo, double length1, double length2) {
     Map<String, double> dataMap = new Map();
-    dataMap.putIfAbsent(cf.toMonthString(monthNo), () => length1);
+    dataMap.putIfAbsent(cf2.toMonthString(monthNo), () => length1);
     dataMap.putIfAbsent("All Holidays", () => length2);
     return dataMap;
   }
 
+  // Split Date
+  List<DateTime> splitDate(String dateTimes) {
+    List<String> dateTimeList = dateTimes.split(",");
+    List<DateTime> resultList = List<DateTime>();
+    for (var x in dateTimeList) {
+      resultList.add(DateTime.parse(x));
+    }
+    return resultList;
+  }
+
   // Event Date Collection
-  List<DateTime> eventDateCollection(List<HolidayData> holidayDataList) {
+  List<DateTime> eventDateCollection(List<AllHolidayData> allHolidays2) {
     List<DateTime> collection = List<DateTime>();
-    for (var holiday in holidayDataList) {
-      collection.add(holiday.dateTime);
+    for (var x in allHolidays2) {
+      if (x.hasMultiDate == true) {
+        collection.addAll(splitDate(x.dateTime));
+      } else {
+        DateTime y = DateTime.parse(x.dateTime);
+        collection.add(y);
+      }
     }
     return collection;
   }
 
-  Future<List<HolidayData>> fetchAllData() async {
-    List<HolidayData> listOfHoliday;
-    await rootBundle.loadString("assets/data/holiday_data.json").then((value) {
-      listOfHoliday = holidayDataFromJson(value);
+  Future<List<AllHolidayData>> fetchAllData() async {
+    List<AllHolidayData> listOfHoliday;
+    await rootBundle.loadString("assets/data/main_data.json").then((value) {
+      listOfHoliday = allHolidayDataFromJson(value);
     });
     return listOfHoliday;
   }
 
   // Holiday Count in a Month
-  double holidayCounterInMonth(int month, List<HolidayData> holidayData) {
+  double holidayCounterInMonth(
+      int month, List<AllHolidayData> listOfAllHolidayData2) {
     int counter = 0;
-    List<DateTime> allCollection = eventDateCollection(holidayData);
+    List<DateTime> allCollection = eventDateCollection(listOfAllHolidayData2);
     for (var collection in allCollection) {
       if (collection.month == month) {
         counter++;
@@ -117,7 +133,7 @@ class CustomFunction {
           days = 31;
         }
         break;
-      //TODO:: have to check leap year
+      // Have to check Leap Year if year goes dynamic
       case 2:
         {
           days = 29;

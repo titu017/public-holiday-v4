@@ -1,0 +1,409 @@
+{
+  "compulsory": {
+    "general": [
+      {
+        "dateTime": "2020-02-21",
+        "hasMultiEvent": "TRUE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৮",
+        "monthBangla": "ফাল্গুন",
+        "eventName": "শহীদ দিবস ও আন্তর্জাতিক মাতৃভাষা দিবস"
+      },
+      {
+        "dateTime": "2020-03-17",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৩",
+        "monthBangla": "চৈত্র",
+        "eventName": "জাতির পিতা বঙ্গবন্ধু শেখ মুজিবুর রহমান-এর জন্ম দিবস"
+      },
+      {
+        "dateTime": "2020-03-26",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১২",
+        "monthBangla": "চৈত্র",
+        "eventName": "স্বাধীনতা ও জাতীয় দিবস"
+      },
+      {
+        "dateTime": "2020-05-01",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৮",
+        "monthBangla": "বৈশাখ",
+        "eventName": "মে দিবস"
+      },
+      {
+        "dateTime": "2020-05-06",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৩",
+        "monthBangla": "বৈশাখ",
+        "eventName": "বুদ্ধ পূর্ণিমা/বৈশাখী পূর্ণিমা"
+      },
+      {
+        "dateTime": "2020-05-22",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৮",
+        "monthBangla": "জ্যৈষ্ঠ",
+        "eventName": "জুমাতুল বিদা"
+      },
+      {
+        "dateTime": "2020-05-25",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১১",
+        "monthBangla": "জ্যৈষ্ঠ",
+        "eventName": "ঈদ-উল-ফিতর"
+      },
+      {
+        "dateTime": "2020-08-01",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৭",
+        "monthBangla": "শ্রাবণ",
+        "eventName": "ঈদ-উল-আযহা"
+      },
+      {
+        "dateTime": "2020-08-11",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৭",
+        "monthBangla": "শ্রাবণ",
+        "eventName": "শুভ জন্মাষ্টমী"
+      },
+      {
+        "dateTime": "2020-08-15",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৩১",
+        "monthBangla": "শ্রাবণ",
+        "eventName": "জাতীয় শোক দিবস"
+      },
+      {
+        "dateTime": "2020-10-26",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১০",
+        "monthBangla": "কার্তিক",
+        "eventName": "দূর্গা পূজা"
+      },
+      {
+        "dateTime": "2020-10-30",
+        "hasMultiEvent": "TRUE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৪",
+        "monthBangla": "কার্তিক",
+        "eventName": "ঈদ-ই-মিলাদুন্নবী (সাঃ)"
+      },
+      {
+        "dateTime": "2020-12-16",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১",
+        "monthBangla": "পৌষ",
+        "eventName": "বিজয় দিবস"
+      },
+      {
+        "dateTime": "2020-12-25",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১০",
+        "monthBangla": "পৌষ",
+        "eventName": "বড় দিন"
+      }
+    ],
+    "nirbahi": [
+      {
+        "dateTime": "2020-04-09",
+        "hasMultiEvent": "TRUE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৬",
+        "monthBangla": "চৈত্র",
+        "eventName": "শব-ই-বরাত"
+      },
+      {
+        "dateTime": "2020-04-14",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১",
+        "monthBangla": "বৈশাখ",
+        "eventName": "বাংলা নবর্বষ"
+      },
+      {
+        "dateTime": "2020-05-21",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৭",
+        "monthBangla": "জ্যৈষ্ঠ",
+        "eventName": "শব-ই-ক্বদর"
+      },
+      {
+        "dateTime": [
+          {
+            "one": "2020-05-24"
+          },
+          {
+            "two": "2020-05-26"
+          }
+        ],
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "TRUE",
+        "dateBangla": "১০ ও ১২",
+        "monthBangla": "জ্যৈষ্ঠ",
+        "eventName": "ঈদ-উল-ফিতর"
+      },
+      {
+        "dateTime": [
+          {
+            "one": "2020-07-31"
+          },
+          {
+            "two": "2020-08-02"
+          }
+        ],
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "TRUE",
+        "dateBangla": "১৬ ও ১৮",
+        "monthBangla": "শ্রাবণ",
+        "eventName": "ঈদ-উল-আযহা"
+      },
+      {
+        "dateTime": "2020-08-30",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৫",
+        "monthBangla": "ভাদ্র",
+        "eventName": "আশুরা"
+      }
+    ]
+  },
+  "optional": {
+    "christian": [
+      {
+        "dateTime": "2020-01-01",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৭",
+        "monthBangla": "পৌষ",
+        "eventName": "ইংরেজী নববর্ষ"
+      },
+      {
+        "dateTime": "2020-02-26",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৩",
+        "monthBangla": "ফাল্গুন",
+        "eventName": "ভস্ম বুধবার"
+      },
+      {
+        "dateTime": "2020-04-09",
+        "hasMultiEvent": "TRUE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৬",
+        "monthBangla": "চৈত্র",
+        "eventName": "পূণ্য বৃহস্পতিবার"
+      },
+      {
+        "dateTime": "2020-04-10",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৭",
+        "monthBangla": "চৈত্র",
+        "eventName": "পূণ্য শুক্রবার"
+      },
+      {
+        "dateTime": "2020-04-11",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৮",
+        "monthBangla": "চৈত্র",
+        "eventName": "পূণ্য শনিবার"
+      },
+      {
+        "dateTime": "2020-04-12",
+        "hasMultiEvent": "TRUE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৯",
+        "monthBangla": "চৈত্র",
+        "eventName": "ইস্টার সানডে"
+      },
+      {
+        "dateTime": [
+          {
+            "one": "2020-12-24"
+          },
+          {
+            "two": "2020-12-26"
+          }
+        ],
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "TRUE",
+        "dateBangla": "৯ ও ১১",
+        "monthBangla": "পৌষ",
+        "eventName": "যীশু খ্রিষ্টের জন্মোৎসব (বড়দিনের পূর্বের ও পরের দিন)"
+      }
+    ],
+    "buddhist": [
+      {
+        "dateTime": "2020-02-08",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৫",
+        "monthBangla": "মাঘ",
+        "eventName": "মাঘী পূর্ণিমা"
+      },
+      {
+        "dateTime": "2020-04-13",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৩০",
+        "monthBangla": "চৈত্র",
+        "eventName": "চৈত্র সংক্রান্তি"
+      },
+      {
+        "dateTime": "2020-07-04",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২০",
+        "monthBangla": "আষাঢ়",
+        "eventName": "আষাঢ়ী পূর্ণিমা"
+      },
+      {
+        "dateTime": "2020-09-02",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৮",
+        "monthBangla": "ভাদ্র",
+        "eventName": "মধু পূর্ণিমা (ভাদ্র পূর্ণিমা)"
+      },
+      {
+        "dateTime": "2020-10-01",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৬",
+        "monthBangla": "আশ্বিন",
+        "eventName": "প্রবারণা পূর্ণিমা"
+      }
+    ],
+    "hindu": [
+      {
+        "dateTime": "2020-01-29",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৫",
+        "monthBangla": "মাঘ",
+        "eventName": "শ্রী শ্রী সরস্বতী পূজা"
+      },
+      {
+        "dateTime": "2020-02-21",
+        "hasMultiEvent": "TRUE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৮",
+        "monthBangla": "ফাল্গুন",
+        "eventName": "শ্রী শ্রী শিবরাত্রী ব্রত"
+      },
+      {
+        "dateTime": "2020-03-09",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৫",
+        "monthBangla": "ফাল্গুন",
+        "eventName": "শুভ দোল যাত্রা"
+      },
+      {
+        "dateTime": "2020-03-22",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৮",
+        "monthBangla": "চৈত্র",
+        "eventName": "শ্রী শ্রী হরিচাঁদ ঠাকুরের আবির্ভাব"
+      },
+      {
+        "dateTime": "2020-09-17",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২",
+        "monthBangla": "আশ্বিন",
+        "eventName": "শুভ মহালয়া"
+      },
+      {
+        "dateTime": "2020-10-25",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৯",
+        "monthBangla": "কার্তিক",
+        "eventName": "শ্রী শ্রী দুর্গাপূজা (নবমী)"
+      },
+      {
+        "dateTime": "2020-10-30",
+        "hasMultiEvent": "TRUE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৪",
+        "monthBangla": "কার্তিক",
+        "eventName": "শ্রী শ্রী লক্ষ্মীপূজা"
+      },
+      {
+        "dateTime": "2020-11-14",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৯",
+        "monthBangla": "কার্তিক",
+        "eventName": "শ্রী শ্রী শ্যামা পূজা"
+      }
+    ],
+    "muslim": [
+      {
+        "dateTime": "2020-03-23",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "৯",
+        "monthBangla": "চৈত্র",
+        "eventName": "শব-ই-মেরাজ"
+      },
+      {
+        "dateTime": "2020-05-27",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৩",
+        "monthBangla": "জ্যৈষ্ঠ",
+        "eventName": "ঈদ-উল-ফিতর"
+      },
+      {
+        "dateTime": "2020-08-03",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১৯",
+        "monthBangla": "শ্রাবণ",
+        "eventName": "ঈদ-উল-আযহা"
+      },
+      {
+        "dateTime": "2020-10-14",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "২৯",
+        "monthBangla": "আশ্বিন",
+        "eventName": "আখেরী চাহার সোম্বা"
+      },
+      {
+        "dateTime": "2020-11-23",
+        "hasMultiEvent": "FALSE",
+        "hasMultiDate": "FALSE",
+        "dateBangla": "১২",
+        "monthBangla": "অগ্রহায়ণ",
+        "eventName": "ফাতেহা-ইয়াজদাহম"
+      }
+    ],
+    "ethnic": [
+      {
+        "dateTime": "2020-04-12,2020-04-15",
+        "hasMultiEvent": "TRUE",
+        "hasMultiDate": "TRUE",
+        "dateBangla": "২৯ ও ২",
+        "monthBangla": "চৈত্র-বৈশাখ",
+        "eventName": "ক্ষুদ্র নৃগোষ্ঠীর অন্তর্ভুক্ত কর্মকর্তা-কর্মচারীদের বৈসাবি ও পার্বত্য চট্টগ্রামের অন্যান্য ক্ষুদ্র নৃগোষ্ঠীসমূহের অনুরুপ সামাজিক উৎসব"
+      }
+    ]
+  }
+}

@@ -1,0 +1,416 @@
+[
+  {
+    "category": "ঐচ্ছিক ছুটি (খ্রিষ্টান পর্ব)",
+    "dateTime": "2020-01-01",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৭",
+    "monthBangla": "পৌষ",
+    "eventName": "ইংরেজী নববর্ষ"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (হিন্দু পর্ব)",
+    "dateTime": "2020-01-29",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৫",
+    "monthBangla": "মাঘ",
+    "eventName": "শ্রী শ্রী সরস্বতী পূজা"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (বৌদ্ধ পর্ব)",
+    "dateTime": "2020-02-08",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২৫",
+    "monthBangla": "মাঘ",
+    "eventName": "মাঘী পূর্ণিমা"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-02-21",
+    "hasMultiEvent": true,
+    "hasMultiDate": false,
+    "dateBangla": "৮",
+    "monthBangla": "ফাল্গুন",
+    "eventName": "শহীদ দিবস ও আন্তর্জাতিক মাতৃভাষা দিবস"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (হিন্দু পর্ব)",
+    "dateTime": "2020-02-21",
+    "hasMultiEvent": true,
+    "hasMultiDate": false,
+    "dateBangla": "৮",
+    "monthBangla": "ফাল্গুন",
+    "eventName": "শ্রী শ্রী শিবরাত্রী ব্রত"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (খ্রিষ্টান পর্ব)",
+    "dateTime": "2020-02-26",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৩",
+    "monthBangla": "ফাল্গুন",
+    "eventName": "ভস্ম বুধবার"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (হিন্দু পর্ব)",
+    "dateTime": "2020-03-09",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২৫",
+    "monthBangla": "ফাল্গুন",
+    "eventName": "শুভ দোল যাত্রা"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-03-17",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "৩",
+    "monthBangla": "চৈত্র",
+    "eventName": "জাতির পিতা বঙ্গবন্ধু শেখ মুজিবুর রহমান-এর জন্ম দিবস"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (হিন্দু পর্ব)",
+    "dateTime": "2020-03-22",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "৮",
+    "monthBangla": "চৈত্র",
+    "eventName": "শ্রী শ্রী হরিচাঁদ ঠাকুরের আবির্ভাব"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (মুসলিম পর্ব)",
+    "dateTime": "2020-03-23",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "৯",
+    "monthBangla": "চৈত্র",
+    "eventName": "শব-ই-মেরাজ"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-03-26",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১২",
+    "monthBangla": "চৈত্র",
+    "eventName": "স্বাধীনতা ও জাতীয় দিবস"
+  },
+  {
+    "category": "নির্বাহী আদেশে সরকারি ছুটি",
+    "dateTime": "2020-04-09",
+    "hasMultiEvent": true,
+    "hasMultiDate": false,
+    "dateBangla": "২৬",
+    "monthBangla": "চৈত্র",
+    "eventName": "শব-ই-বরাত"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (খ্রিষ্টান পর্ব)",
+    "dateTime": "2020-04-09",
+    "hasMultiEvent": true,
+    "hasMultiDate": false,
+    "dateBangla": "২৬",
+    "monthBangla": "চৈত্র",
+    "eventName": "পূণ্য বৃহস্পতিবার"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (খ্রিষ্টান পর্ব)",
+    "dateTime": "2020-04-10",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২৭",
+    "monthBangla": "চৈত্র",
+    "eventName": "পূণ্য শুক্রবার"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (খ্রিষ্টান পর্ব)",
+    "dateTime": "2020-04-11",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২৮",
+    "monthBangla": "চৈত্র",
+    "eventName": "পূণ্য শনিবার"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (খ্রিষ্টান পর্ব)",
+    "dateTime": "2020-04-12",
+    "hasMultiEvent": true,
+    "hasMultiDate": false,
+    "dateBangla": "২৯",
+    "monthBangla": "চৈত্র",
+    "eventName": "ইস্টার সানডে"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (ক্ষুদ্র নৃগোষ্ঠী)",
+    "dateTime": "2020-04-12,2020-04-15",
+    "hasMultiEvent": true,
+    "hasMultiDate": true,
+    "dateBangla": "২৯ ও ২",
+    "monthBangla": "চৈত্র-বৈশাখ",
+    "eventName": "ক্ষুদ্র নৃগোষ্ঠীর অন্তর্ভুক্ত কর্মকর্তা-কর্মচারীদের বৈসাবি ও পার্বত্য চট্টগ্রামের অন্যান্য ক্ষুদ্র নৃগোষ্ঠীসমূহের অনুরুপ সামাজিক উৎসব"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (বৌদ্ধ পর্ব)",
+    "dateTime": "2020-04-13",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "৩০",
+    "monthBangla": "চৈত্র",
+    "eventName": "চৈত্র সংক্রান্তি"
+  },
+  {
+    "category": "নির্বাহী আদেশে সরকারি ছুটি",
+    "dateTime": "2020-04-14",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১",
+    "monthBangla": "বৈশাখ",
+    "eventName": "বাংলা নবর্বষ"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-05-01",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৮",
+    "monthBangla": "বৈশাখ",
+    "eventName": "মে দিবস"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-05-06",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২৩",
+    "monthBangla": "বৈশাখ",
+    "eventName": "বুদ্ধ পূর্ণিমা/বৈশাখী পূর্ণিমা"
+  },
+  {
+    "category": "নির্বাহী আদেশে সরকারি ছুটি",
+    "dateTime": "2020-05-21",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "৭",
+    "monthBangla": "জ্যৈষ্ঠ",
+    "eventName": "শব-ই-ক্বদর"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-05-22",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "৮",
+    "monthBangla": "জ্যৈষ্ঠ",
+    "eventName": "জুমাতুল বিদা"
+  },
+  {
+    "category": "নির্বাহী আদেশে সরকারি ছুটি",
+    "dateTime": "2020-05-24,2020-05-26",
+    "hasMultiEvent": false,
+    "hasMultiDate": true,
+    "dateBangla": "১০ ও ১২",
+    "monthBangla": "জ্যৈষ্ঠ",
+    "eventName": "ঈদ-উল-ফিতর"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-05-25",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১১",
+    "monthBangla": "জ্যৈষ্ঠ",
+    "eventName": "ঈদ-উল-ফিতর"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (মুসলিম পর্ব)",
+    "dateTime": "2020-05-27",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৩",
+    "monthBangla": "জ্যৈষ্ঠ",
+    "eventName": "ঈদ-উল-ফিতর"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (বৌদ্ধ পর্ব)",
+    "dateTime": "2020-07-04",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২০",
+    "monthBangla": "আষাঢ়",
+    "eventName": "আষাঢ়ী পূর্ণিমা"
+  },
+  {
+    "category": "নির্বাহী আদেশে সরকারি ছুটি",
+    "dateTime": "2020-07-31,2020-08-02",
+    "hasMultiEvent": false,
+    "hasMultiDate": true,
+    "dateBangla": "১৬ ও ১৮",
+    "monthBangla": "শ্রাবণ",
+    "eventName": "ঈদ-উল-আযহা"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-08-01",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৭",
+    "monthBangla": "শ্রাবণ",
+    "eventName": "ঈদ-উল-আযহা"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (মুসলিম পর্ব)",
+    "dateTime": "2020-08-03",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৯",
+    "monthBangla": "শ্রাবণ",
+    "eventName": "ঈদ-উল-আযহা"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-08-11",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২৭",
+    "monthBangla": "শ্রাবণ",
+    "eventName": "শুভ জন্মাষ্টমী"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-08-15",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "৩১",
+    "monthBangla": "শ্রাবণ",
+    "eventName": "জাতীয় শোক দিবস"
+  },
+  {
+    "category": "নির্বাহী আদেশে সরকারি ছুটি",
+    "dateTime": "2020-08-30",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৫",
+    "monthBangla": "ভাদ্র",
+    "eventName": "আশুরা"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (বৌদ্ধ পর্ব)",
+    "dateTime": "2020-09-02",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৮",
+    "monthBangla": "ভাদ্র",
+    "eventName": "মধু পূর্ণিমা (ভাদ্র পূর্ণিমা)"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (হিন্দু পর্ব)",
+    "dateTime": "2020-09-17",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২",
+    "monthBangla": "আশ্বিন",
+    "eventName": "শুভ মহালয়া"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (বৌদ্ধ পর্ব)",
+    "dateTime": "2020-10-01",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১৬",
+    "monthBangla": "আশ্বিন",
+    "eventName": "প্রবারণা পূর্ণিমা"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (মুসলিম পর্ব)",
+    "dateTime": "2020-10-14",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২৯",
+    "monthBangla": "আশ্বিন",
+    "eventName": "আখেরী চাহার সোম্বা"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (হিন্দু পর্ব)",
+    "dateTime": "2020-10-25",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "৯",
+    "monthBangla": "কার্তিক",
+    "eventName": "শ্রী শ্রী দুর্গাপূজা (নবমী)"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-10-26",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১০",
+    "monthBangla": "কার্তিক",
+    "eventName": "দূর্গা পূজা"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-10-30",
+    "hasMultiEvent": true,
+    "hasMultiDate": false,
+    "dateBangla": "১৪",
+    "monthBangla": "কার্তিক",
+    "eventName": "ঈদ-ই-মিলাদুন্নবী (সাঃ)"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (হিন্দু পর্ব)",
+    "dateTime": "2020-10-30",
+    "hasMultiEvent": true,
+    "hasMultiDate": false,
+    "dateBangla": "১৪",
+    "monthBangla": "কার্তিক",
+    "eventName": "শ্রী শ্রী লক্ষ্মীপূজা"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (হিন্দু পর্ব)",
+    "dateTime": "2020-11-14",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "২৯",
+    "monthBangla": "কার্তিক",
+    "eventName": "শ্রী শ্রী শ্যামা পূজা"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (মুসলিম পর্ব)",
+    "dateTime": "2020-11-23",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১২",
+    "monthBangla": "অগ্রহায়ণ",
+    "eventName": "ফাতেহা-ইয়াজদাহম"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-12-16",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১",
+    "monthBangla": "পৌষ",
+    "eventName": "বিজয় দিবস"
+  },
+  {
+    "category": "ঐচ্ছিক ছুটি (খ্রিষ্টান পর্ব)",
+    "dateTime": "2020-12-24,2020-12-26",
+    "hasMultiEvent": false,
+    "hasMultiDate": true,
+    "dateBangla": "৯ ও ১১",
+    "monthBangla": "পৌষ",
+    "eventName": "যীশু খ্রিষ্টের জন্মোৎসব (বড়দিনের পূর্বের ও পরের দিন)"
+  },
+  {
+    "category": "সাধারণ ছুটি",
+    "dateTime": "2020-12-25",
+    "hasMultiEvent": false,
+    "hasMultiDate": false,
+    "dateBangla": "১০",
+    "monthBangla": "পৌষ",
+    "eventName": "বড় দিন"
+  }
+]
